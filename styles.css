@@ -1,0 +1,115 @@
+:root {
+    --font-color: #20232a;
+    --react-blue: #61dafb;
+}
+
+/*global ones*/
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    color: var(--font-color);
+}
+
+h1 {
+    font-size: 2.8rem;
+}
+
+/*navbar*/
+#navbar {
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    min-width: 240px;
+    background-color: #f7f7f7;
+    min-height: min-content;
+    max-height: 100%;
+    overflow-y: hidden;
+}
+#navbar:hover {
+    overflow-y: auto;
+}
+
+#navbar header {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background-color: var(--font-color);
+    color: var(--react-blue);
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    width: 240px;
+    height: 75px;
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+}
+.logo {
+    max-width: 3rem;
+    padding-right: 0;
+    margin-right: 0;
+}
+#navbar header span {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nav-elements {
+    list-style-type: none;
+    padding-left: 1rem;
+    margin-top: 75px;
+}
+.nav-link {
+    color: var(--font-color);
+    font-style: normal;
+    text-decoration: none;
+}
+.nav-link:hover {
+    color: var(--react-blue);
+}
+
+.nav-elements li {
+    padding: 0.4rem 0rem;
+}
+
+main {
+    position: relative;
+    margin-left: 260px;
+    padding-right: 10px;
+}
+
+code {
+    display: block;
+    position: relative;
+    text-align: left;
+    white-space: pre-wrap;
+    margin: 0;
+    padding: 0;
+    background-color: var(--font-color);
+    color: #f7f7f7;
+    width: 100%;
+    border-radius: 0.8rem;
+}
+
+@media (max-width: 600px) {
+    #navbar {
+        left: -230px;
+    }
+    #navbar:hover {
+        left: 0px;
+        transition: all 0.3s ease;
+    }
+    
+    main {
+        margin-left: 30px;
+        left: 0;
+        transition: all 0.3s ease;
+    }
+    #navbar:hover + main {
+        left: 230px;
+    }
+}
